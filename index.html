@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              wobble: "wobble 2s linear infinite",
+            },
+            keyframes: {
+              wobble: {
+                "0%": { transform: "rotate(0deg)" },
+                "25%": { transform: "rotate(5deg)" },
+                "50%": { transform: "rotate(0eg)" },
+                "75%": { transform: "rotate(-5deg)" },
+                "100%": { transform: "rotate(0deg)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Animations - Tailwind CSS for Devs in a Hurry</title>
+  </head>
+  <body class="bg-slate-500 h-screen flex justify-center items-center">
+    <figure class="relative">
+      <img
+        class="h-40 w-40 rounded-full object-cover object-[center_bottom] animate-wobble"
+        src="https://images.unsplash.com/photo-1718362872329-d146e6b4675b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+      />
+      <span
+        class="h-4 w-4 bg-green-400 absolute top-4 right-4 rounded-full animate-ping"
+      ></span>
+      <span
+        class="h-4 w-4 bg-green-400 absolute top-4 right-4 rounded-full"
+      ></span>
+    </figure>
+  </body>
+</html>
